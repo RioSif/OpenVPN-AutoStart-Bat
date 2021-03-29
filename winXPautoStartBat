@@ -1,0 +1,5 @@
+@echo off
+taskkill /IM "openvpn-gui.exe" /F
+taskkill /IM "openvpn.exe" /F
+ping -n 10 -w 300000 localhost>nul
+start "" "C:\Program Files\OpenVPN\bin\openvpn-gui.exe" --connect configname.ovpn
